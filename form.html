@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Tasks and Exercises for a Specially Abled Child</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <style>
+        body {
+            background: linear-gradient(to bottom right, #ffcc00, #ff66b2); /* Gradient with playful colors */
+            font-family: 'Comic Sans MS', 'Arial', sans-serif;
+            padding: 20px;
+            color: #333; /* Dark text color for better contrast */
+        }
+
+        h1 {
+            color: #4caf50; /* Green */
+            font-weight: bold;
+        }
+
+        form {
+            background-color: #ffffffcc; /* Semi-transparent white background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        textarea {
+            width: 100%;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            box-sizing: border-box;
+            font-weight: bold;
+        }
+
+        button {
+            background-color: #4caf50; /* Green */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em; /* Slightly larger font size */
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+
+        /* Pop-up message styling */
+        .modal-content {
+            background-color: #4caf50; /* Green */
+            color: #fff;
+        }
+
+        .modal-header {
+            border-bottom: none;
+        }
+
+        .modal-footer {
+            border-top: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Tell us about your child</h1>
+        <form method="POST" onsubmit="showPopup()">
+            <p>Please describe your child's challenges:</p>
+            <textarea name="problems" rows="5" required></textarea><br>
+            <p>What are your child's strengths?</p>
+            <textarea name="strengths" rows="5" required></textarea><br>
+            <p>What areas does your child need more support?</p>
+            <textarea name="weaknesses" rows="5" required></textarea><br>
+            <p>What are your child's interests and passions?</p>
+            <textarea name="interests" rows="5" required></textarea><br>
+            <button type="submit">Generate Recommendations</button>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- JavaScript for pop-up message -->
+  
+</body>
+</html>

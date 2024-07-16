@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <style>
+        body {
+            background: url('https://t4.ftcdn.net/jpg/02/71/12/01/360_F_271120192_ZDT2FCxH94akiIsOHwVULWnbNzi8Oagn.jpg') no-repeat center center fixed; /* Replace with your image URL */
+            background-size: cover;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            color: #ffffff; /* White text for better visibility */
+            opacity: 0.9; /* Reduced opacity of the background image */
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        h1 {
+            color: #e5f50c; /* Pink */
+            font-weight: bold;
+            font-size: 3.5em;
+        }
+
+        a {
+            margin: 10px 0;
+            padding: 15px 30px;
+            background-color: #f42ecc; /* Deep Purple */
+            color: #ffffff; /* White text */
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+            display: inline-block;
+            font-weight: bold;
+            font-size: 3em;
+        }
+
+        a:hover {
+            background-color: #651fff; /* Darker Purple */
+        }
+        .btn btn-primary{
+            /* height: 100%; */
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-4">Welcome to the Quiz Game!</h1>
+        <a href="{{ url_for('enter_name')}}" class="btn btn-primary" >Start Quiz</a>
+        <br>
+        <a href="/leaderboard" class="btn btn-primary">Leaderboard</a>
+    </div>
+
+    <!-- Bootstrap JS (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

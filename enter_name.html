@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Name</title>
+    <!-- Bootstrap CSS link -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #ff9d6c, #bb73f8); /* Playful gradient background */
+            color: #fff; /* White text for better readability */
+            text-align: center;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #ffea00; /* Yellow heading color */
+        }
+
+        form {
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background for form */
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        label {
+            color: #333; /* Dark text for labels */
+        }
+
+        button {
+            background-color: #ffea00; /* Yellow button color */
+            color: #333; /* Dark text for buttons */
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #ffcc00; /* Darker yellow on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Welcome to the Quiz!</h2>
+
+    <form action="/enter_name" method="post">
+        <label for="name">Enter Your Name:</label>
+        <input type="text" name="name" id="name" required>
+        <br><br>
+        <label for="age">Select Your Age:</label>
+        <select name="age" id="age" required>
+            <option value="" disabled selected>Select Age Group</option>
+            <option value="2-5">2-5 years</option>
+            <option value="5-8">5-8 years</option>
+            <option value="8-10">8-10 years</option>
+        </select>
+
+        <br><br>
+
+        <button type="submit">Start Quiz</button>
+    </form>
+
+    <!-- Bootstrap JS and Popper.js scripts (required for Bootstrap) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

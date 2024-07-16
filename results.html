@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendations for Your Child</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #666;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .task-container {
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
+
+        .task-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .task-title {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+            flex: 1;
+        }
+
+        .task-description {
+            color: #666;
+            line-height: 1.6;
+            flex: 3;
+        }
+
+        .checkbox {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Daily Tasks, Exercises, and Future Plan</h1>
+        <p>Based on the information you provided, here are some recommendations for your child:</p>
+
+        <!-- Iterate over each element in the 'lines' list -->
+        {% for line in results %}
+            {% set content = line.split(':') %}
+            <div class="task-container">
+                <input type="checkbox" class="checkbox">
+                <h2 class="task-title">{{ content[0]|replace('**', '') }}</h2>
+                <p class="task-description">{{ content[1]|replace('**', '') }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
